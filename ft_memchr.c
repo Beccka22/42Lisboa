@@ -2,19 +2,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 23:52:23 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/04 21:04:57 by rneves-s         ###   ########.fr       */
+/*   Created: 2022/11/04 00:38:51 by beccka            #+#    #+#             */
+/*   Updated: 2022/11/04 00:38:52 by beccka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include<string.h>
+#include<stdio.h>
+
+void *memchr(const void *s, int c, size_t n)
 {
-	if (c >= 0 || c <= 127)
-		return (1);
-	else
-		return (0);
+	
 }

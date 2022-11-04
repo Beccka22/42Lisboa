@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -7,10 +6,9 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 21:59:05 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/10/29 21:59:14 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/04 21:11:16 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include<stdio.h>
 #include<string.h>
@@ -18,32 +16,29 @@
 
 void	*ft_memmove(void *dest, const void *src, unsigned int n)
 {
-	char	*pDest;
-	const char	*pSrc;
-	char	*tmp;
+	char			*p_dest;
+	char			*p_src;
+	char			*tmp;
 	unsigned int	i;
 
-	pDest = (char *)dest;
-	pSrc = (const char*)src;
+	p_dest = (char *)dest;
+	p_src = (char *)src;
 	tmp = (char *) malloc(sizeof(char ) * n);
-
 	if (tmp == NULL)
 		return (NULL);
-
 	i = 0;
 	while (i < n)
 	{
-		*(tmp + i) = *(pSrc + i);
+		*(tmp + i) = *(p_src + i);
 		i++;
 	}
 	i = 0;
 	while (i < n)
 	{
-		*(pDest + i) = *(tmp + i);
+		*(p_dest + i) = *(tmp + i);
 		i++;
 	}
 	free(tmp);
-
 	return (dest);
 }
 

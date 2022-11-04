@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 23:52:50 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/02 23:52:52 by beccka           ###   ########.fr       */
+/*   Updated: 2022/11/04 21:05:34 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c){
-	if(c >= ' ' && c <= '~')
+int	ft_isprint(int c)
+{
+	if (c >= ' ' && c <= '~')
 		return (16384);
 	else
 		return (0);

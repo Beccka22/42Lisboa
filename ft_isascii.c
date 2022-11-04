@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 23:52:23 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/02 23:52:25 by beccka           ###   ########.fr       */
+/*   Updated: 2022/11/04 21:04:57 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c){
-	if(c >= 0 || c <= 127)
+int	ft_isascii(int c)
+{
+	if (c >= 0 || c <= 127)
 		return (1);
 	else
 		return (0);

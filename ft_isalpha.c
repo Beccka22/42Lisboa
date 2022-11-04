@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 23:51:26 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/02 23:51:35 by beccka           ###   ########.fr       */
+/*   Updated: 2022/11/04 21:04:37 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c){
-	if((c >= 65 && c <= 91) || (c >= 97 && c <= 122))
+int	ft_isalpha(int c)
+{
+	if ((c >= 65 && c <= 91) || (c >= 97 && c <= 122))
 		return (1024);
 	else
 		return (0);

@@ -2,20 +2,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 00:07:07 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/03 00:07:10 by beccka           ###   ########.fr       */
+/*   Created: 2022/11/04 00:38:51 by beccka            #+#    #+#             */
+/*   Updated: 2022/11/04 00:38:52 by beccka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(const char *s){
-	int  i = 0;
+#include<string.h>
+#include<stdio.h>
 
-	while(s[i] != '\0'){
-		i++;
-	}
-	return (i);
+void *memchr(const void *s, int c, size_t n)
+{
+	
 }

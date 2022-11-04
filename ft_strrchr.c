@@ -2,20 +2,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 00:07:07 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/03 00:07:10 by beccka           ###   ########.fr       */
+/*   Created: 2022/11/03 23:17:50 by beccka            #+#    #+#             */
+/*   Updated: 2022/11/03 23:17:51 by beccka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(const char *s){
-	int  i = 0;
+#include<string.h>
+#include<stdio.h>
 
-	while(s[i] != '\0'){
+char	*ft_strrchr(const char *s, int c)
+{
+	int	i;
+	int	p;
+
+	i = 0;
+	p = 0;
+
+	if (!s)
+		return (NULL);
+
+	while (s[i])
+	{
+		if(s[i] == c)
+			p = i;
 		i++;
 	}
-	return (i);
+	return ((char *)(s + p));
 }
+
+// int main()
+// {
+// 	char *s = "l--.-ao.a.--trala";
+// 	int c = '.';
+
+// 	printf("%s\n", ft_strrchr(s, c));
+// 	printf("%s\n", strrchr(s, c));
+// 	return (0);
+// }

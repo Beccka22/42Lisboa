@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 01:42:47 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/05 20:24:30 by rneves-s         ###   ########.fr       */
+/*   Created: 2022/11/05 19:14:07 by rneves-s          #+#    #+#             */
+/*   Updated: 2022/11/05 20:46:35 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
-#include<ctype.h>
+#include<libft.h>
 
-int	ft_tolower(int c)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	else
-		return (c);
+	void	*pointer;
+
+	pointer = (void *)(nmemb * size);
+	if (!pointer)
+		return (NULL);
+	ft_bzero(pointer, size);
+	return (pointer);
 }
+ 

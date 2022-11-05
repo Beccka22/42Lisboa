@@ -6,9 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 21:00:16 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/04 21:18:18 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/05 20:22:54 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

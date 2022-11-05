@@ -6,9 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 22:09:34 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/04 21:22:56 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/05 20:24:10 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

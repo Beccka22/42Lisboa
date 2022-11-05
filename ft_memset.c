@@ -6,9 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 00:06:55 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/04 21:30:11 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/05 20:23:54 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *b, char c, int len)
 {

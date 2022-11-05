@@ -6,10 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:17:50 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/04 21:29:36 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/05 20:24:26 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include<string.h>
 #include<stdio.h>
 

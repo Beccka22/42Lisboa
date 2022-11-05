@@ -6,9 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 00:07:07 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/04 21:25:28 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/05 20:24:13 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(const char *s)
 {

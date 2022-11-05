@@ -1,23 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 01:42:47 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/05 20:24:30 by rneves-s         ###   ########.fr       */
+/*   Created: 2022/11/05 20:50:05 by rneves-s          #+#    #+#             */
+/*   Updated: 2022/11/05 22:01:36 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include<stdio.h>
-#include<ctype.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int	ft_tolower(int c)
+char	*ft_strdup(const char *s)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	else
-		return (c);
+	char	*str;
+	int		i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	str = (char *)malloc(sizeof(s) * (ft_strlen((char *)s) + 1));
+	if (!str)
+		return (NULL);
+	while (s[i])
+	{
+		str[i] = s[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
+
+// int		main(void)
+// {
+// 	printf("%s\n", ft_strdup("Hello world!"));
+// 	return (0);
+// }

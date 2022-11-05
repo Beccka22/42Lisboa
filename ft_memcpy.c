@@ -6,9 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 21:59:38 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/04 21:05:50 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/05 20:23:42 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

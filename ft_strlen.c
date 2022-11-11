@@ -6,18 +6,20 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 00:07:07 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/05 20:24:13 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:32:15 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
+	{
 		i++;
+	}
 	return (i);
 }

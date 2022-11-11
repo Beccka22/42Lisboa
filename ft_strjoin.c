@@ -1,41 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 23:17:50 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/11 20:17:37 by rneves-s         ###   ########.fr       */
+/*   Created: 2022/11/11 18:53:24 by rneves-s          #+#    #+#             */
+/*   Updated: 2022/11/11 20:36:36 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int	p;
+	int		i;
+	int		c;
+	int		len;
+	char	*nstr;
 
-	i = 0;
-	p = 0;
-	if (!s)
+	i = -1;
+	c = -1;
+	if (!s1 && !s2)
 		return (NULL);
-	while (s[i])
+	len = (int)ft_strlen(s1) + (int)ft_strlen(s2);
+	nstr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!nstr)
+		return (NULL);
+	while (s1[++c] && len-- > 0)
 	{
-		if (s[i] == c)
-			p = i;
-		i++;
+		nstr[++i] = s1[c];
 	}
-	return ((char *)(s + p));
+	c = -1;
+	while (s2[++c] && len-- > 0)
+	{
+		nstr[++i] = s2[c];
+	}
+	nstr[++i] = '\0';
+	return (nstr);
 }
 
 // int main()
 // {
-// 	char *s = "l--.-ao.a.--trala";
-// 	int c = '.';
-
-// 	printf("%s\n", ft_strrchr(s, c));
-// 	printf("%s\n", strrchr(s, c));
-// 	return (0);
+// 	char *s = "ola";
+// 	char *s2 = "cara";
+// 	ft_strjoin(s, s2);
 // }

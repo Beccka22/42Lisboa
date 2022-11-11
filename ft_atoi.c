@@ -6,15 +6,13 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:43:52 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/05 21:00:28 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:18:47 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "libft.h"
 
 #include<stdio.h>
-#include<string.h>
-#include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {

@@ -6,15 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 21:59:05 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/05 20:23:51 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:18:13 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include<stdio.h>
-#include<string.h>
-#include <stdlib.h>
 
 void	*ft_memmove(void *dest, const void *src, unsigned int n)
 {

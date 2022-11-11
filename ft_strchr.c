@@ -6,13 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 01:49:33 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/05 20:23:59 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:18:07 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
-#include<string.h>
 
 char	*ft_strchr(const char *s, int c)
 {

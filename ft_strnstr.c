@@ -6,23 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 22:48:54 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/05 20:24:21 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:17:43 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<string.h>
-#include<stdio.h>
-
-static int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strnstr(const char *str_big, const char *str_little, size_t len)
 {
@@ -46,7 +34,7 @@ char	*ft_strnstr(const char *str_big, const char *str_little, size_t len)
 				i++;
 				j++;
 			}
-			if (ct == ft_strlen(str_little))
+			if (ct == (int)ft_strlen(str_little))
 				return ((char *)str_big + (i - j));
 		}
 	}

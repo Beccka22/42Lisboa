@@ -6,13 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 01:33:42 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/05 20:24:34 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/11 20:16:57 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
-#include<ctype.h>
 
 int	ft_toupper(int c)
 {

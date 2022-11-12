@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/05 19:14:07 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/11 20:18:39 by rneves-s         ###   ########.fr       */
+/*   Created: 2022/11/12 18:44:41 by rneves-s          #+#    #+#             */
+/*   Updated: 2022/11/12 18:57:23 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*pointer;
+	void	*ptr;
 
-	pointer = (void *)(nmemb * size);
-	if (!pointer)
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
 		return (NULL);
-	ft_bzero(pointer, size);
-	return (pointer);
+	ft_memset((unsigned char *)ptr, 0, nmemb * size);
+	return (ptr);
 }
- 

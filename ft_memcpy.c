@@ -6,27 +6,23 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 21:59:38 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/05 20:23:42 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/12 21:24:14 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
-	char	*csrc;
-	char	*cdest;
 
+	if (!dst && !src)
+		return (0);
 	i = 0;
-	csrc = (char *)src;
-	cdest = (char *)dest;
-	if (csrc == NULL)
-		return (NULL);
-	while (csrc[i] && i < n)
+	while (i < n)
 	{
-		cdest[i] = csrc[i];
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	return (cdest);
+	return (dst);
 }

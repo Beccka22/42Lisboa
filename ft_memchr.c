@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 00:38:51 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/11 20:18:26 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/12 19:00:04 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)str + i);
 		i++;
 	}
+	return (0);
 }
 
 // int main () 

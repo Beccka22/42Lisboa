@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:43:52 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/11 20:18:47 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/12 21:44:24 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ int	ft_atoi(const char *nptr)
 	signal = 1;
 	i = 0;
 	v = 0;
+	while (*nptr && (*nptr == ' ' || *nptr == '\n' || *nptr == '\t'
+			|| *nptr == '\v' || *nptr == '\f' || *nptr == '\r'))
+		++nptr;
 	if (nptr[0] == '-')
 	{
 		signal = -1;

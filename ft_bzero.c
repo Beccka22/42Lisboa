@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 21:00:16 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/05 20:22:54 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/12 18:54:50 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	mem = s;
-	if (s[0] == '\0')
-		return (NULL);
 	while (i < n)
 	{
 		mem[i] = '\0';

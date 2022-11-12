@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 20:13:12 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/11 21:42:33 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/12 18:38:05 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 typedef struct s_list
 {
 	void			*content;
-	struct $_list	*next;
-}	t_list;
+	struct s_list	*next;
+}		t_list;
 
 typedef struct s_split_next
 {
@@ -52,5 +52,5 @@ char	*ft_strnstr(const char *str_big, const char *str_little, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-char 	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(char const *s1, char const *set);
 #endif

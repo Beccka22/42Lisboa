@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 22:48:54 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/11 20:17:43 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/12 21:13:48 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,25 @@
 char	*ft_strnstr(const char *str_big, const char *str_little, size_t len)
 {
 	size_t	i;
-	size_t	j;
-	int		ct;
+	int		j;
 
-	i = -1;
-	if (!str_little)
+	if (*str_little == '\0')
 		return ((char *)str_big);
-	while (str_big[++i] && i < len)
+	i = 0;
+	while (str_big[i] && i < len)
 	{
-		j = 0;
-		if (str_big[i] == str_little[j])
+		if (str_big[i] == str_little[0])
 		{
-			ct = 0;
-			while (str_little[j])
-			{
-				if (str_big[i] == str_little[j])
-					ct++;
-				i++;
+			j = 0;
+			while (str_little[j] && str_big[i + j] && i + j < len
+				&& str_big[i + j] == str_little[j])
 				j++;
-			}
-			if (ct == (int)ft_strlen(str_little))
-				return ((char *)str_big + (i - j));
+			if (str_little[j] == '\0')
+				return ((char *)str_big + i);
 		}
+		i++;
 	}
-	return (NULL);
+	return (0);
 }
 
 // int main()

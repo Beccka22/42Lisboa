@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 23:50:03 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/11 21:38:14 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/12 19:06:29 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_isalnum(int c)
 {	
 	if (c >= 48 && c <= 57)
 		return (8);
-	else if (c >= 65 && c <= 91)
+	else if (c >= 65 && c <= 90)
 		return (8);
 	else if (c >= 97 && c <= 122)
 		return (8);

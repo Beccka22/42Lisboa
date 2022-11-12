@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 18:53:24 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/11 20:36:36 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/12 21:06:52 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	nstr[++i] = '\0';
 	return (nstr);
 }
-
-// int main()
-// {
-// 	char *s = "ola";
-// 	char *s2 = "cara";
-// 	ft_strjoin(s, s2);
-// }

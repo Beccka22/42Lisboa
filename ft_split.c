@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 16:39:05 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/12 18:34:06 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/15 02:47:45 by beccka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include<stdio.h>
+#include "libft.h"
 
 static int	count_occurrences(char const *s, char c)
 {
@@ -31,39 +30,48 @@ static int	count_occurrences(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	int		i;
-	int		j;
 	int		count;
+	int		count_letter;
 	char	**arraystr;
 
 	i = 0;
-	j = 0;
 	count = count_occurrences(s, c);
+	count_letter = 0;
 	arraystr = malloc((count + 1) * sizeof(char *));
-	if (arraystr == NULL)
+	if (!arraystr)
 		return (NULL);
-	while (s[i] && j < count)
+	while (*s)
 	{
-		arraystr[j][i] = s[i];
-		if ((char)s[i] == c)
+		count_letter++;
+		if ((char)*s == c)
 		{
-			printf("%s\n", arraystr[j]);
-			j++;
+			arraystr[i] = (char *)malloc((count_letter - 1)* sizeof(char *));
+			if(arraystr[i])
+			{
+				arraystr[i] = ft_memcpy(arraystr[i], (s - (count_letter - 1)), count_letter - 1);
+				count_letter = 0;
+				if(ft_strlen(arraystr[i]) > 0)
+					i++;
+			}
 		}
-		i++;
+		s++;
 	}
+	arraystr[i] = "\0";
 	return (arraystr);
 }
 
 // int main()
 // {
-// 	char *s = "lololololo";
+// 	char *s = "looleololeoleoleoodo";
 // 	char c = 'o';
 // 	int i = 0;
 // 	char **a;
 // 	a = ft_split(s, c);
+// 	printf("\n\n\n");
 // 	while (a[i])
 // 	{
-// 		printf("%s\n", a[i]);
+// 		printf("str = %s\n", a[i]);
 // 		i++;
 // 	}
+// 	return (0);
 // }

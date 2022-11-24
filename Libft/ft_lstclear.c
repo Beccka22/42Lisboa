@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 18:24:05 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/24 00:53:43 by rneves-s         ###   ########.fr       */
+/*   Created: 2022/11/23 23:48:46 by rneves-s          #+#    #+#             */
+/*   Updated: 2022/11/23 23:58:26 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	t_list	*cnode;
+	t_list	*next;
 
-	if (!s)
-		return (NULL);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
+	if (lst)
 	{
-		if (i >= start && j < len)
+		cnode = *lst;
+		while (cnode)
 		{
-			str[j] = s[i];
-			j++;
+			next = cnode->next;
+			ft_lstdelone(cnode, (del));
+			cnode = next;
 		}
-		i++;
+		*lst = NULL;
 	}
-	str[j] = 0;
-	return (str);
 }

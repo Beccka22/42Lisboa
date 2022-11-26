@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 01:49:33 by beccka            #+#    #+#             */
-/*   Updated: 2022/11/11 20:18:07 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/26 16:35:58 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (NULL);
 }
-
-// int main(){
-// 	char *s = "l--.-aoa";
-// 	int c = '.';
-
-// 	printf("%s\n", ft_strchr(s, c));
-// 	printf("%s\n", strchr(s, c));
-// 	return (0);
-// }

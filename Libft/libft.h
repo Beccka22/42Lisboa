@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 20:13:12 by rneves-s          #+#    #+#             */
-/*   Updated: 2022/11/24 00:16:30 by rneves-s         ###   ########.fr       */
+/*   Updated: 2022/11/26 16:36:18 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,5 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void		ft_putendl_fd(char *s, int fd);
 char		*ft_strchr(const char *s, int c);
-
+char		*ft_strrchr(const char *s, int c);
 #endif

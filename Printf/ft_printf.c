@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 17:32:18 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/01/14 20:44:09 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/01/19 00:36:17 by beccka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,9 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(ap);
 	return (len);
+}
+
+int main(){
+	
+	printf("ola %s vc tem %X %x anos", "maria", 13332, 13332);
 }

@@ -1,40 +1,67 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 20:58:37 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/01/14 20:59:35 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/01/19 00:11:28 by beccka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_itoa(const char *nptr)
+static int	ft_get_size(int n)
 {
-	int	i;
-	int	signal;
-	int	v;
+	int	size;
 
-	signal = 1;
-	i = 0;
-	v = 0;
-	while (*nptr && (*nptr == ' ' || *nptr == '\n' || *nptr == '\t'
-			|| *nptr == '\v' || *nptr == '\f' || *nptr == '\r'))
-		++nptr;
-	if (nptr[0] == '-')
+	size = 0;
+	if (n <= 0)
+		size++;
+	while (n != 0)
 	{
-		signal = -1;
-		i++;
-	}	
-	if (nptr[0] == '+')
-		i++;
-	while (nptr[i] && nptr[i] >= 48 && nptr[i] <= 57)
-	{
-		v = v * 10 + nptr[i] - '0';
-		i++;
+		n = n / 10;
+		size++;
 	}
-	return (v * signal);
+	return (size);
+}
+
+static void	ft_fill_res(int size, int offset, int n, char *res)
+{
+	while (size > offset)
+	{
+		res[size - 1] = n % 10 + '0';
+		n = n / 10;
+		size--;
+	}
+}
+
+char	*ft_itoa(int n)
+{
+	int		offset;
+	int		size;
+	char	*res;
+
+	offset = 0;
+	size = ft_get_size(n);
+	res = (char *)malloc(sizeof(char) * size + 1);
+	if (!res)
+		return (0);
+	if (n == -2147483648)
+	{
+		res[0] = '-';
+		res[1] = '2';
+		n = 147483648;
+		offset = 2;
+	}
+	if (n < 0)
+	{
+		res[0] = '-';
+		offset = 1;
+		n = -n;
+	}
+	ft_fill_res(size, offset, n, res);
+	res[size] = '\0';
+	return (res);
 }

@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+         #
+#    By: beccka <beccka@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/09 21:12:10 by rneves-s          #+#    #+#              #
-#    Updated: 2023/01/14 20:55:50 by rneves-s         ###   ########.fr        #
+#    Updated: 2023/01/19 00:29:42 by beccka           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS				=	ft_itoa.c ft_printf_arg.c ft_printf.c \
-						ft_putchar.c ft_putnbr_u.c ft_putnbr.c \
-						ft_putstr.c ft_strchr.c ft_strlen.c
+						ft_putchar.c ft_putnbr_u.c ft_putnbr.c ft_put_hex.c\
+						ft_putstr.c ft_strchr.c ft_strlen.c ft_utoa.c
 
 OBJS				=	$(SRCS:.c=.o)
 

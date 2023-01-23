@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 17:18:33 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/01/19 00:31:13 by beccka           ###   ########.fr       */
+/*   Updated: 2023/01/23 22:02:02 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int		ft_putstr(char *str);
 char	*ft_strchr(const char *s, int c);
 int		ft_strlen(const char *s);
 int		ft_printf(const char *format, ...);
-int		ft_put_hex(unsigned int  nbr, char *base);
+int		ft_put_hex(unsigned int nbr, char *base);
 char	*ft_utoa(unsigned int n);
+char	*ft_hex_to_str(unsigned long n, char *base);
+int		ft_count_hex(unsigned long n);
+int		ft_put_pointer(void *nbr, char *base);
 #endif

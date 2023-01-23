@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_hex.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 22:49:00 by beccka            #+#    #+#             */
-/*   Updated: 2023/01/23 21:59:44 by rneves-s         ###   ########.fr       */
+/*   Created: 2022/12/03 22:44:25 by rneves-s          #+#    #+#             */
+/*   Updated: 2023/01/09 23:47:42 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include  "libftprintf.h"
 
-int	ft_put_hex(unsigned int nbr, char *base)
+int	ft_strlen(const char *s)
 {
-	int					len;
-	char				*str;
-	unsigned long		n;
+	int	i;
 
-	n = (unsigned long)nbr;
-	str = ft_hex_to_str(n, base);
-	len = ft_putstr(str);
-	free(str);
-	return (len);
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i])
+		i++;
+	return (i);
 }

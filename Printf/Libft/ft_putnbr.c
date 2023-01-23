@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_hex.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 22:49:00 by beccka            #+#    #+#             */
-/*   Updated: 2023/01/23 21:59:44 by rneves-s         ###   ########.fr       */
+/*   Created: 2023/01/09 23:43:27 by rneves-s          #+#    #+#             */
+/*   Updated: 2023/01/09 23:43:58 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libftprintf.h"	
 
-int	ft_put_hex(unsigned int nbr, char *base)
+int	ft_putnbr(int nbr)
 {
-	int					len;
-	char				*str;
-	unsigned long		n;
+	char	*str;
+	int		len;
 
-	n = (unsigned long)nbr;
-	str = ft_hex_to_str(n, base);
+	str = ft_itoa(nbr);
 	len = ft_putstr(str);
 	free(str);
 	return (len);

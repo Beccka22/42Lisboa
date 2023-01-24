@@ -6,11 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 21:12:30 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/01/23 22:05:54 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/01/24 00:29:56 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -38,9 +38,8 @@ int	ft_printf(const char *format, ...)
 
 // int	main()
 // {
-// 	char *s = "ola";
-// 	printf("ola %s vc tem %d anos, hexadecimais logo ai %X %x, %% meu caracter
-// favorito e %c, num %i . %u %p",
-// 	 "maria", 126, 232324, 232324,'H', 12, 150, s);
+// 	ft_printf("ola %s vc tem %d anos, hexadecimais logo ai %X %x, %%  
+//meu caracter favorito e %c, num %i . %u %p",
+// 	 "maria", 126, 232324, 232324,'H', 12, 150, 0);
 // 	return (0);
 // }

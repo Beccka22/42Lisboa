@@ -6,11 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 22:49:00 by beccka            #+#    #+#             */
-/*   Updated: 2023/01/23 21:59:44 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/01/23 23:34:04 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_put_hex(unsigned int nbr, char *base)
 {

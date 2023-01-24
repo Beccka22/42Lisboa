@@ -6,12 +6,12 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 17:18:33 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/01/23 22:02:02 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/01/23 23:33:26 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <stdlib.h>

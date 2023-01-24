@@ -6,11 +6,11 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 21:53:12 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/01/09 22:43:48 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/01/23 23:34:43 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libftprintf.h"
+#include "ft_printf.h"
 
 char	*ft_strchr(const char *s, int c)
 {

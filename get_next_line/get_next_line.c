@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 22:34:40 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/02/27 23:42:09 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/03/04 22:35:42 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_read_str(int fd, char *str)
 	char		*buff;
 	int			rd_bytes;
 
-	buff = malloc((BUFFER_SIZE + 1) * sizeof(char));
+	buff = malloc((BUFFER_SIZE) * sizeof(char));
 	if (!buff)
 		return (NULL);
 	rd_bytes = 1;
@@ -45,8 +45,20 @@ char	*get_next_line(int fd)
 		return (0);
 	str = ft_read_str(fd, str);
 	if (!str)
-		(NULL);
+		return (NULL);
 	line = ft_get_line(str);
-	str = ft_new_left_str(str);
+	str = remove_read_line(str);
 	return (line);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	int		fd;
+
+// 	if (argc <= 0 || !argv)
+// 		return (0);
+// 	fd = open(argv[1], O_RDONLY);
+// 	printf("%s", get_next_line(fd));
+// 	close(fd);
+// 	return (0);
+// }

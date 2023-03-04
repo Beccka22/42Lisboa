@@ -6,25 +6,25 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 22:47:57 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/02/27 23:42:23 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/03/04 22:43:29 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static size_t	ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
 	size_t	i;
 
 	i = 0;
 	if (!s)
 		return (0);
-	while (s[i] != '\0')
+	while (s[i])
 		i++;
 	return (i);
 }
 
-static char	*ft_strchr(char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
 	int	i;
 
@@ -33,7 +33,7 @@ static char	*ft_strchr(char *s, int c)
 		return (0);
 	if (c == '\0')
 		return ((char *)&s[ft_strlen(s)]);
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		if (s[i] == (char) c)
 			return ((char *)&s[i]);
@@ -42,7 +42,7 @@ static char	*ft_strchr(char *s, int c)
 	return (0);
 }
 
-static char	*ft_strjoin(char *left_str, char *buff)
+char	*ft_strjoin(char *left_str, char *buff)
 {
 	size_t	i;
 	size_t	j;
@@ -61,16 +61,44 @@ static char	*ft_strjoin(char *left_str, char *buff)
 	i = -1;
 	j = 0;
 	if (left_str)
-		while (left_str[++i] != '\0')
+		while (left_str[++i])
 			str[i] = left_str[i];
-	while (buff[j] != '\0')
+	while (buff[j])
 		str[i++] = buff[j++];
 	str[ft_strlen(left_str) + ft_strlen(buff)] = '\0';
 	free(left_str);
 	return (str);
 }
 
-static char	*ft_new_left_str(char *left_str)
+char	*ft_get_line(char *left_str)
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	if (!left_str[i])
+		return (NULL);
+	while (left_str[i] && left_str[i] != '\n')
+		i++;
+	str = (char *)malloc(sizeof(char) * (i + 2));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (left_str[i] && left_str[i] != '\n')
+	{
+		str[i] = left_str[i];
+		i++;
+	}
+	if (left_str[i] == '\n')
+	{
+		str[i] = left_str[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
+
+char	*remove_read_line(char *left_str)
 {
 	int		i;
 	int		j;

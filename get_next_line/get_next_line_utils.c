@@ -6,120 +6,83 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 22:47:57 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/03/04 22:43:29 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/03/08 22:27:02 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(char *s)
-{
-	size_t	i;
-
-	i = 0;
-	if (!s)
-		return (0);
-	while (s[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strchr(char *s, int c)
+int	ft_len_line(char *str)
 {
 	int	i;
 
 	i = 0;
-	if (!s)
+	if (!str)
 		return (0);
-	if (c == '\0')
-		return ((char *)&s[ft_strlen(s)]);
-	while (s[i])
+	while (str[i])
 	{
-		if (s[i] == (char) c)
-			return ((char *)&s[i]);
+		if (str[i] == '\n' && ++i)
+			break ;
+		i++;
+	}
+	return (i);
+}
+
+char	*ft_get_buffer(char *buffer, char *line)
+{
+	char	*temp;
+	int		i;
+	int		j;
+
+	temp = line;
+	i = 0;
+	j = 0;
+	line = malloc(sizeof(char) * (ft_len_line(buffer) + ft_len_line(line) + 1));
+	line[ft_len_line(buffer) + ft_len_line(temp)] = 0;
+	while (temp && temp[i] && ++i)
+		line[i - 1] = temp[i - 1];
+	if (temp)
+		free(temp);
+	while (buffer && buffer[j] && j < BUFFER_SIZE)
+	{
+		line[i + j] = buffer[j];
+		buffer[j] = 0;
+		if (line[i + j] == '\n')
+			break ;
+		j++;
+	}
+	ft_remove_read_line(buffer);
+	return (line);
+}
+
+int	ft_is_line(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str && str[i])
+	{
+		if (str[i] == '\n')
+			return (1);
 		i++;
 	}
 	return (0);
 }
 
-char	*ft_strjoin(char *left_str, char *buff)
+void	ft_remove_read_line(char *buffer)
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	int	i;
+	int	j;
 
-	if (!left_str)
-	{
-		left_str = (char *)malloc(1 * sizeof(char));
-		left_str[0] = '\0';
-	}
-	if (!left_str || !buff)
-		return (NULL);
-	str = malloc(sizeof(char) * ((ft_strlen(left_str) + ft_strlen(buff)) + 1));
-	if (str == NULL)
-		return (NULL);
-	i = -1;
+	i = 0;
 	j = 0;
-	if (left_str)
-		while (left_str[++i])
-			str[i] = left_str[i];
-	while (buff[j])
-		str[i++] = buff[j++];
-	str[ft_strlen(left_str) + ft_strlen(buff)] = '\0';
-	free(left_str);
-	return (str);
-}
-
-char	*ft_get_line(char *left_str)
-{
-	int		i;
-	char	*str;
-
-	i = 0;
-	if (!left_str[i])
-		return (NULL);
-	while (left_str[i] && left_str[i] != '\n')
+	while (i < BUFFER_SIZE && buffer[i] == '\0')
 		i++;
-	str = (char *)malloc(sizeof(char) * (i + 2));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (left_str[i] && left_str[i] != '\n')
+	while (i < BUFFER_SIZE)
 	{
-		str[i] = left_str[i];
+		buffer[j] = buffer[i];
+		buffer[i] = '\0';
+		j++;
 		i++;
 	}
-	if (left_str[i] == '\n')
-	{
-		str[i] = left_str[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}
-
-char	*remove_read_line(char *left_str)
-{
-	int		i;
-	int		j;
-	char	*str;
-
-	i = 0;
-	while (left_str[i] && left_str[i] != '\n')
-		i++;
-	if (!left_str[i])
-	{
-		free(left_str);
-		return (NULL);
-	}
-	str = (char *)malloc(sizeof(char) * (ft_strlen(left_str) - i + 1));
-	if (!str)
-		return (NULL);
-	i++;
-	j = 0;
-	while (left_str[i])
-		str[j++] = left_str[i++];
-	str[j] = '\0';
-	free(left_str);
-	return (str);
 }

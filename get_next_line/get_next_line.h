@@ -6,7 +6,7 @@
 /*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 20:54:59 by rneves-s          #+#    #+#             */
-/*   Updated: 2023/03/04 22:34:31 by rneves-s         ###   ########.fr       */
+/*   Updated: 2023/03/08 22:14:02 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,10 @@
 #  define BUFFER_SIZE 1000
 # endif
 
-char	*get_next_line(int fd);
-char	*ft_read_str(int fd, char *str);
-char	*ft_read_to_str(int fd, char *left_str);
-size_t	ft_strlen(char *s);
-char	*ft_strchr(char *s, int c);
-char	*ft_strjoin(char *left_str, char *buff);
-char	*ft_get_line(char *left_str);
-char	*remove_read_line(char *left_str);
+char		*get_next_line(int fd);
+int			t_len_line(char *str);
+void		ft_remove_read_line(char *left_str);
+char		*ft_get_buffer(char *buffer, char *line);
+int			ft_is_line(char *str);
 
 #endif

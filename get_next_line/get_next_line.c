@@ -16,8 +16,16 @@ char	*get_next_line(int fd)
 {
 	char		*line;
 	static char	buffer[BUFFER_SIZE + 1];
+	int			i;
 
+	i = 0;
 	line = NULL;
+	if (read(fd, 0, 0) < 0 || BUFFER_SIZE < 1)
+	{
+		while (buffer[i])
+			buffer[i++] = 0;
+		return (NULL);
+	}
 	while (1)
 	{
 		if (!buffer[0] && read(fd, buffer, BUFFER_SIZE) <= 0)

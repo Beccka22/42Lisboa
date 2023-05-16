@@ -6,7 +6,7 @@
 /*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 00:43:09 by beccka            #+#    #+#             */
-/*   Updated: 2023/05/14 17:24:26 by beccka           ###   ########.fr       */
+/*   Updated: 2023/05/16 23:53:07 by beccka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,13 @@ void	param_to_var(t_stab *var, char **argv, int c)
 	var->top_a = i - 1;
 }
 
+void	nor(t_stab *var)
+{
+	indexing(var);
+	push_sorted_to_b(var);
+	push_sorted_to_a(var);
+}
+
 int main(int argc, char **argv){
 	t_stab	var;
 	char	**tmp;
@@ -80,6 +87,21 @@ int main(int argc, char **argv){
 	tmp = NULL;
 	exitp(argc);
 	tmp = load_tmp(argv, tmp, &argc);
-	if(checke_arg(tmp) == 0)
+	if (checke_arg(tmp) == 0)
 		quit(&var, 1, 0);
+	param_to_var(&var, tmp, argc++);
+	if (check_repeat(var.tab_a, var.top_a) == 0)
+		quit(&var, 1, 0);
+	if (check_if_sorted(var.tab_a, var.top_a) == 0)
+		quit(&var, 1, 0);
+	if (argc >= 3 && argc <= 6)
+	{
+		if (argc <= 4)
+			sort_3bn(&var, argc);
+		if (argc > 4)
+			sort_5bn(&var, argc);
+		quit(&var, 0, 0);
+	}
+	nor(&var);
+	quit(&var, 2, _SC_TYPED_MEMORY_OBJECTS);
 }

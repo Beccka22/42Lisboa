@@ -1,0 +1,36 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    MakeFile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: beccka <beccka@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/04/15 18:31:36 by rneves-s          #+#    #+#              #
+#    Updated: 2023/05/08 00:43:20 by beccka           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+SRCS				=	$(shell find *.c) 
+
+OBJS				=	$(SRCS:.c=.o)
+
+CC					= 	gcc
+RM					= 	rm -f
+CFLAGS				=	-Wall -Wextra -Werror -I
+
+NAME				= push_swap.a
+
+all:				$(NAME)
+
+$(NAME):			$(OBJS)
+					ar rcs $(NAME) $(OBJS)
+
+clean:				
+					$(RM) $(OBJS)
+
+fclean:				clean
+					$(RM) $(NAME)
+
+re:					fclean $(NAME)
+
+.PHONY:			all clean fclean re

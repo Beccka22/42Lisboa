@@ -6,7 +6,7 @@
 #    By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/27 18:48:49 by rneves-s          #+#    #+#              #
-#    Updated: 2023/05/27 22:03:20 by rneves-s         ###   ########.fr        #
+#    Updated: 2023/05/27 22:13:39 by rneves-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,17 +14,16 @@ SRCS				=	actions/index_pushb.c
 
 OBJS				=	$(SRCS:.c=.o)
 
-CC					= 	gcc
 RM					= 	rm -f
 CFLAGS				=	-Wall -Wextra -Werror -I
 
-NAME				= push_swap.a
+NAME				= push_swap
 
 all:				$(NAME)
 
-$(NAME): $(SRCS) $(OBJS) mondatory/push_swap.h
-	@gcc $(CFLAGS) $(SRCS) -o $(NAME)
-	@echo ------Compiled Mondatory part-------
+$(NAME):		 	$(SRCS) $(OBJS) push_swap.h
+					@gcc $(CFLAGS) $(SRCS) -o $(NAME)
+					@echo ------Compiled Mondatory part-------
 
 clean:				
 					$(RM) $(OBJS)

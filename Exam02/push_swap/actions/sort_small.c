@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_small.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 23:56:35 by beccka            #+#    #+#             */
-/*   Updated: 2023/05/17 00:25:02 by beccka           ###   ########.fr       */
+/*   Created: 2023/05/27 18:46:49 by rneves-s          #+#    #+#             */
+/*   Updated: 2023/05/27 18:49:12 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	sort_3nb(t_stab *var, int c)
 {

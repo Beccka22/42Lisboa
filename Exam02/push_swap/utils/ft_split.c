@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 02:45:15 by beccka            #+#    #+#             */
-/*   Updated: 2023/05/10 03:02:48 by beccka           ###   ########.fr       */
+/*   Created: 2023/05/27 18:46:59 by rneves-s          #+#    #+#             */
+/*   Updated: 2023/05/27 18:48:00 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static	int count_words(char *s, char c)
 {

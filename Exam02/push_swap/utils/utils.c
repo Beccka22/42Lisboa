@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 00:48:27 by beccka            #+#    #+#             */
-/*   Updated: 2023/05/17 01:33:39 by beccka           ###   ########.fr       */
+/*   Created: 2023/05/27 18:47:20 by rneves-s          #+#    #+#             */
+/*   Updated: 2023/05/27 18:47:52 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void exitp(int num){
 	if (num < 2)

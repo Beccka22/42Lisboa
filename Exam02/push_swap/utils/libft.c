@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 02:46:37 by beccka            #+#    #+#             */
-/*   Updated: 2023/05/17 01:54:19 by beccka           ###   ########.fr       */
+/*   Created: 2023/05/27 18:47:05 by rneves-s          #+#    #+#             */
+/*   Updated: 2023/05/27 18:47:56 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_strlen(char *s){
 	int	i;

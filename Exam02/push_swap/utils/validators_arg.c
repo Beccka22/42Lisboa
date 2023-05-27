@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   validators_arg.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 00:59:14 by beccka            #+#    #+#             */
-/*   Updated: 2023/05/14 17:30:57 by beccka           ###   ########.fr       */
+/*   Created: 2023/05/27 18:48:10 by rneves-s          #+#    #+#             */
+/*   Updated: 2023/05/27 18:48:14 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	check_arg(char **argv)
 {

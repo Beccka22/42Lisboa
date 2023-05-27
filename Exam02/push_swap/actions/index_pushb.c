@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   index_pushb.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beccka <beccka@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rneves-s <rneves-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 00:38:11 by beccka            #+#    #+#             */
-/*   Updated: 2023/05/17 01:30:43 by beccka           ###   ########.fr       */
+/*   Created: 2023/05/27 18:46:38 by rneves-s          #+#    #+#             */
+/*   Updated: 2023/05/27 19:07:59 by rneves-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	indexing(t_stab *var)
 {
@@ -66,7 +66,7 @@ void	push_sorted_to_b(t_stab *var)
 	}
 }
 
-void	mini_sorta(t_stab *var, int *i, int j)
+void	mini_cycle_sorta(t_stab *var, int *i, int j)
 {
 	int	findj;
 
@@ -88,3 +88,29 @@ void	mini_sorta(t_stab *var, int *i, int j)
 	}
 }
 
+void push_sorted_to_a(t_stab *var)
+{
+	int	i;
+	int	top_b;
+	int	num_p;
+
+	i = 0;
+	top_b = var->top_b;
+	num_p = var->tab_b[var->top_b];
+
+	while (top_b + 1)
+	{
+		i = 0;
+		while (i <= var->top_b)
+		{
+			if (num_p < var->tab_b[i])
+				top_b = var->tab_b[i];
+			i++;
+		}
+		i = 0;
+		mini_cycle_sorta(var, &i, top_b);
+		pa(var->tab_a, &var->top_a, var->tab_b, var->top_b);
+		top_b = var->tab_b[var->top_b];
+		num_p--;
+	}
+}
